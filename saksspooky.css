@@ -1,0 +1,1359 @@
+/* ========================================================= */
+/* 🪦 Sak (#327675)'s Den CSS - Foggy/Misty Theme         */
+/* 👁️ Spooky aesthetic with deep grays and blacks         */
+/* ========================================================= */
+
+/*
+READ ME:
+- This CSS is themed around cold slate grays, foggy forests,
+  and absolute void blacks.
+- Colors are deep charcoal tones, weathered stone shades,
+  ashen silver highlights, and faint misty accents.
+- Designed for a chilling, atmospheric, and desaturated look.
+- Do NOT resell or heavily edit.
+- Thank you so much for choosing my CSS, I hope you enjoy!
+*/
+
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Marcellus&display=swap');
+
+:root {
+
+  /* ========================================================= */
+  /* 🪦 SHADOWED CRYPT PALETTE                                */
+  /* ========================================================= */
+
+  --kolur1: #2b2b2b;      /* dark slate gray */
+  --kolur170: #2b2b2bb3;
+
+  --kolur2: #4a4a4a;      /* cold iron gray */
+  --kolur270: #4a4a4ab3;
+
+  --kolur3: #111111;      /* near-black charcoal */
+  --kolur370: #111111cc;
+
+  --kolur350: #1c1c1cd9;  /* dark glass obsidian */
+
+  --kolur4: #1a1a1a;      /* crypt shadow */
+  --kolur470: #1a1a1ac9;
+
+  --kolur5: #d6d6d6;      /* pale ash highlight */
+  --kolur6: #050505;      /* abyss black */
+  --kolur7: #9e9e9e;      /* glowing silver/mist accent */
+
+  --kolur760: #2b2b2b45;
+  --kolur780: #4a4a4a45;
+
+  --darkgray: #0a0a0a;    /* void shadow */
+  --lightwhite: #e0e0e0d0;
+  --white: #ffffff;
+}
+
+/* ============================= */
+/* 🌑 BACKGROUND */
+/* ============================= */
+@media screen and (max-width: 800px){
+
+  body {
+    background: url('https://i.ibb.co/Q3v98rDh/Screenshot-2026-05-17-at-23-03-18.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    font-family: 'Cinzel', serif;
+
+    color: var(--kolur5) !important;
+  }
+
+  /* 🌑 mobile background stabilizer */
+  html:not(.nolayout) body:after {
+    content:"";
+    position:fixed;
+    top:0;
+    height:160vh;
+    left:0;
+    right:0;
+    z-index:-1;
+
+    background:
+      linear-gradient(
+        rgba(15, 15, 15, 0.55),
+        rgba(5, 5, 5, 0.72)
+      ),
+      url('https://i.ibb.co/Q3v98rDh/Screenshot-2026-05-17-at-23-03-18.png') center center;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    font-family: 'Cinzel', serif;
+
+    color: var(--kolur5) !important;
+  }
+	
+/* 🩸 floating box positioning */
+  .boxtopper {
+    padding: none;
+    float: left;
+    margin: -180px;
+    height: 30px;
+    width: 300px;
+    position: relative;
+    z-index: 1;
+    margin-left: 0px;
+    pointer-events:none !important;
+  }
+}
+
+/* ============================= */
+/* 🌑 DESKTOP BACKGROUND */
+/* ============================= */
+@media screen and (min-width: 801px){
+
+  body {
+    background:
+      linear-gradient(
+        rgba(20, 20, 20, 0.45),
+        rgba(10, 10, 10, 0.68)
+      ),
+      url('https://i.ibb.co/Q3v98rDh/Screenshot-2026-05-17-at-23-03-18.png') center center fixed;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-background-size: cover;
+
+    font-family: 'Cinzel', serif;
+    font-size: 18px !important;
+
+    color: var(--kolur5) !important;
+  }
+
+/* 🩸 floating box positioning */
+  .boxtopper {
+    padding: none;
+    float: right;
+    margin: -680px;
+    height: 30px;
+    width: 340px;
+    position: relative;
+    z-index: 3;
+    margin-right: -30px;
+    pointer-events:none !important;
+  }
+}
+
+/* Logo Replacer */
+div.container.main>div:nth-child(1)>nav>div.navbar-header>a>img {
+    content: url('https://i.ibb.co/Y73F6Zrx/lionskulllogo-20260517235916.png');
+    width: 220px !important;
+    height: 120px !important;
+    object-fit: contain !important;
+}
+
+/* Cursor */
+* {
+  cursor: url('https://cdn.cursors-4u.net/previews/halloween-bone-2a663578-32.webp') 32 32, auto !important;
+}
+
+/* ============================= */
+/* 🌑 CHAT MESSAGES */
+/* ============================= */
+
+#chatMessageList .s-chat-message:nth-child(even) {
+    background: rgba(22, 22, 22, 0.92) !important; /* dark slate */
+    color: #e0e0e0 !important; /* pale ash */
+    font-family: 'Cinzel', serif;
+}
+
+#chatMessageList .s-chat-message:nth-child(odd) {
+    background: rgba(30, 30, 30, 0.82) !important; /* deep charcoal */
+    color: #e0e0e0 !important;
+    font-family: 'Cinzel', serif;
+}
+
+.s-chat-message__pinned {
+    background: linear-gradient(
+        90deg,
+        rgba(20,20,20,0.95),
+        rgba(100,100,100,0.20) /* silver mist glow */
+    ) !important;
+
+    color: #ffffff !important;
+
+    box-shadow: 0 0 10px rgba(120,120,120,0.25); /* ashen glow */
+    font-family: 'Cinzel', serif;
+}
+
+.s-chat-message_timestamp {
+    color: #a6a6a6 !important; /* dusty silver */
+    font-family: 'Cinzel', serif;
+}
+
+div#chatMessageContainer {
+    border: none !important;
+}
+
+button#label_currentChannel {
+    background: linear-gradient(90deg, #141414, #424242) !important; /* dark ash fade */
+    color: #ffffff !important;
+    font-family: 'Cinzel', serif;
+}
+
+/* ============================= */
+/* 🌑 TOPBAR */
+/* ============================= */
+
+.container.topbar {
+    background: linear-gradient(
+        180deg,
+        rgba(20, 20, 20, 0.95),
+        rgba(10, 10, 10, 0.95)
+    ) !important;
+
+    border-radius: 12px !important;
+
+    box-shadow:
+        inset 0 0 20px rgba(100,100,100,0.10),
+        0 0 10px rgba(120,120,120,0.18),
+        1px 1px 5px var(--darkgray) !important;
+
+    padding: 10px 15px !important;
+    backdrop-filter: blur(6px);
+
+    font-family: 'Cinzel', serif;
+}
+
+/* 🌑 welcome text */
+.welcomeback {
+    color: #e0e0e0 !important;
+    font-size: 16px;
+
+    text-shadow: 0 0 5px rgba(100,100,100,0.35);
+
+    font-family: 'Cinzel', serif;
+}
+
+/* 🩸 username link */
+.welcomeback a {
+    color: #9e9e9e !important;
+
+    font-weight: bold;
+
+    text-shadow: 0 0 6px rgba(120,120,120,0.35);
+
+    transition: 0.5s;
+
+    font-family: 'Cinzel', serif;
+}
+
+.welcomeback a:hover {
+    color: #ffffff !important;
+
+    text-shadow: 0 0 10px rgba(200,200,200,0.45);
+
+    font-family: 'Cinzel', serif;
+}
+
+/* ============================= */
+/* 🌑 LINKS */
+/* ============================= */
+
+.toplinks {
+    display: flex;
+    align-items: center;
+    gap: 1px;
+
+    font-family: 'Cinzel', serif;
+}
+
+/* dark slate links */
+.toplinks li a {
+    color: #b0b0b0 !important; /* soft pewter */
+    font-size: 9px;
+    text-decoration: none;
+
+    padding: 4px 10px;
+    border-radius: 8px;
+
+    transition: 0.4s ease;
+}
+
+/* glow hover */
+.toplinks li a:hover {
+    color: #ffffff !important; /* pure mist */
+
+    background: rgba(100, 100, 100, 0.18);
+    box-shadow: 0 0 10px rgba(120, 120, 120, 0.22);
+
+    text-shadow: 0 0 6px rgba(200, 200, 200, 0.35);
+}
+
+/* ============================= */
+/* 🩸 ICONS */
+/* ============================= */
+
+.toplinks img.icon {
+    filter:
+        drop-shadow(0 0 4px rgba(100, 100, 100, 0.25))
+        brightness(1.05);
+
+    transition: 0.4s ease;
+}
+
+.toplinks li a:hover img.icon {
+    filter:
+        drop-shadow(0 0 8px rgba(200, 200, 200, 0.35))
+        brightness(1.12);
+}
+
+/* ============================= */
+/* 💰 CURRENCY NUMBERS */
+/* ============================= */
+
+#silverBeetlesAmt,
+#goldBeetlesAmt {
+    color: #d6d6d6 !important; /* soft silver light */
+
+    text-shadow: 0 0 6px rgba(100, 100, 100, 0.35);
+
+    font-family: 'Cinzel', serif;
+}
+
+/* ============================= */
+/* 🚪 LOGOUT */
+/* ============================= */
+
+.toplinks li a[href*="logout"] {
+    color: #e0e0e0 !important;
+}
+
+.toplinks li a[href*="logout"]:hover {
+    background: rgba(100, 100, 100, 0.15);
+
+    box-shadow: 0 0 10px rgba(100, 100, 100, 0.28);
+}
+
+/* ============================= */
+/* 🩸 CAVES */
+/* ============================= */
+
+div.cave-grid > img {
+    height: 150px;
+    width: 200px;
+    opacity: 0.82;
+    border-radius: 10px !important;
+
+    box-shadow:
+        0 0 12px rgba(100, 100, 100, 0.18) !important;
+
+    transition: 1s ease;
+}
+
+/* hover base */
+div.cave-grid > img:hover {
+    opacity: 1;
+    filter: brightness(1.08) contrast(1.03);
+}
+
+/* prideoverview */
+div.cave-grid > img[src$="prideoverviewbanner.png"] {
+    content: url('https://i.ibb.co/tpqq0WXr/Screenshot-2026-05-17-at-23-10-59.png') !important;
+}
+
+div.cave-grid > img[src$="prideoverviewbanner.png"]:hover {
+    content: url('https://i.ibb.co/tpqq0WXr/Screenshot-2026-05-17-at-23-10-59.png') !important;
+}
+
+/* unsorted lions */
+div.cave-grid > img[src$="unsortedlionsbanner.png"] {
+    content: url('https://i.ibb.co/pjpgxnpP/Screenshot-2026-05-17-at-23-15-09.png') !important;
+}
+
+div.cave-grid > img[src$="unsortedlionsbanner.png"]:hover {
+    content: url('https://i.ibb.co/pjpgxnpP/Screenshot-2026-05-17-at-23-15-09.png') !important;
+}
+
+/* nesting */
+div.cave-grid > img[src$="nestingbanner.png"] {
+    content: url('https://i.ibb.co/m54cx9P2/Screenshot-2026-05-17-at-23-17-32.png') !important;
+}
+
+div.cave-grid > img[src$="nestingbanner.png"]:hover {
+    content: url('https://i.ibb.co/m54cx9P2/Screenshot-2026-05-17-at-23-17-32.png') !important;
+}
+
+/* default caves */
+div.cave-grid > img[src$="cavedefault.jpg"],
+div.cave-grid > img[src$="caveunused.jpg"] {
+    content: url("https://i.ibb.co/WNQGt1wx/Screenshot-2026-05-17-at-23-21-15.png") !important;
+}
+
+/* ============================= */
+/* 🌸 FEATURED LIONESS */
+/* ============================= */
+
+.lionImage img:first-child {
+    visibility: hidden;
+}
+
+.lionImage {
+    background: url('https://i.ibb.co/3yysfx2y/Screenshot-2026-05-12-at-01-01-55.png') no-repeat !important;
+    background-size: cover;
+
+    box-shadow:
+        0 0 18px rgba(100, 100, 100, 0.20);
+}
+
+/* ============================= */
+/* 🌑 CAVE / PANEL STYLE */
+/* ============================= */
+
+.cave-grid,
+.mound-grid {
+    background: rgba(24, 24, 24, 0.82) !important; /* deep dark charcoal base */
+
+    box-shadow:
+        inset 0 0 22px rgba(100, 100, 100, 0.10),
+        0 0 10px rgba(0,0,0,0.45),
+        0 0 10px rgba(120, 120, 120, 0.18) !important;
+
+    border-radius: 12px !important;
+
+    text-shadow: 1px 1px 1.5px #050505;
+
+    max-height: 175px;
+    max-width: 250px;
+    overflow: hidden;
+
+    font-family: 'Cinzel', serif;
+    color: #ffffff !important;
+}
+
+/* ============================= */
+/* 🌑 MOUNDS */
+/* ============================= */
+
+.mound-grid img {
+    background: url('https://i.ibb.co/B709tLs/Screenshot-2026-05-17-at-23-19-33.png') no-repeat center !important;
+
+    width: 0;
+    height: 0;
+
+    padding-top: 80px;
+    padding-right: 130px;
+
+    background-size: contain !important; 
+
+    border-radius: 10px !important;
+    opacity: 0.85;
+
+    box-shadow:
+        1px 1px 5px rgba(0,0,0,0.55),
+        0 0 10px rgba(100, 100, 100, 0.18) !important;
+
+    transition: 0.3s ease;
+}
+
+/* hover */
+.mound-grid img:hover {
+    opacity: 1;
+    transform: scale(1.03);
+}
+
+/* ============================= */
+/* 🌑 LINKS */
+/* ============================= */
+
+a:link,
+a:visited {
+    color: #e0e0e0 !important; /* pale ash */
+
+    transition: 0.5s !important;
+
+    text-shadow: 0 0 6px rgba(100, 100, 100, 0.25);
+
+    font-family: 'Cinzel', serif;
+}
+
+a:hover {
+    color: #ffffff !important; /* brighter mist glow */
+}
+
+/* ============================= */
+/* ✨ SILVER MIST GLOW HEADINGS */
+/* ============================= */
+
+h1, h2, h3 {
+    text-shadow: 0 0 10px rgba(120, 120, 120, 0.22);
+
+    font-family: 'Cinzel', serif;
+
+    color: #ffffff !important;
+}
+
+/* ============================= */
+/* 🩸 LION + USER AVATAR */
+/* ============================= */
+
+div#lion_image {
+    opacity: .88;
+
+    box-shadow:
+        0 0 14px rgba(100, 100, 100, 0.25) !important;
+
+    border-radius: 6% !important;
+
+    overflow: hidden;
+
+    margin-top: 19px;
+    margin-left: 6px;
+
+    transition: .6s ease;
+}
+
+div#lion_image:hover {
+    opacity: 1;
+
+    box-shadow:
+        0 0 20px rgba(200, 200, 200, 0.30) !important;
+
+    transition: .6s ease;
+}
+
+table#player img {
+    opacity: 0.88;
+
+    box-shadow:
+        0 0 12px rgba(100, 100, 100, 0.20) !important;
+
+    border-radius: 8px;
+}
+
+table#player img:hover {
+    opacity: 1;
+
+    box-shadow:
+        0 0 18px rgba(220, 220, 220, 0.28) !important;
+
+    transition: .6s ease;
+}
+
+/* original code by hok-z #170947 */
+#lion_image:after {
+	content: "";
+
+	position: absolute;
+	left: 15px;
+	top: 28px;
+
+	width: 215px;
+	height: 215px;
+
+	background: url("https://i.ibb.co/2YkmPFLX/silverframe.gif") no-repeat center;
+	background-size: contain;
+
+	pointer-events: none;
+}
+
+table#player img {
+	border-radius: 5% !important;
+	overflow: hidden;
+}
+
+/* ============================= */
+/* 🌑 NAVBAR (DARK ASH GLOW) */
+/* ============================= */
+
+.navbar {
+    background: #1a1a1a; /* near-black obsidian base */
+
+    border-bottom: 0px ridge !important;
+
+    border-radius: 10px;
+
+    box-shadow:
+        inset 0 -40px 60px rgba(100, 100, 100, 0.18),
+        0 0 10px rgba(120, 120, 120, 0.18) !important;
+
+    font-family: 'Cinzel', serif;
+}
+
+.navbar-default .navbar-nav > li > a {
+    font-size: 18px !important;
+
+    color: #ffffff !important;
+
+    font-family: 'Cinzel', serif;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+    background: #4a4a4a;
+
+    color: #ffffff !important;
+
+    text-shadow: 0 0 8px rgba(200, 200, 200, 0.45);
+
+    border-radius: 18px;
+
+    box-shadow:
+        inset 0 0 18px rgba(200, 200, 200, 0.18);
+
+    transition: 0.7s !important;
+}
+
+/* ============================= */
+/* 🩸 MAIN PANEL */
+/* ============================= */
+
+.container.main {
+    background: rgba(22, 22, 22, 0.50) !important;
+
+    border-left: 0px ridge;
+    border-right: 0px ridge;
+    border-bottom: 0px ridge;
+
+    border-radius: 10px;
+
+    box-shadow:
+        inset 0 0 90px rgba(120, 120, 120, 0.10),
+        0 0 10px rgba(100, 100, 100, 0.18) !important;
+
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.6);
+
+    font-family: 'Cinzel', serif;
+}
+
+/* ============================= */
+/* 🌑 LEFT PANEL */
+/* ============================= */
+
+.col-md-9 {
+    background: none;
+
+    border-right: none;
+
+    color: #ffffff !important;
+
+    font-family: 'Cinzel', serif;
+}
+
+/* ============================= */
+/* 🩸 BREADCRUMB */
+/* ============================= */
+
+.breadcrumb {
+    background: #242424 !important;
+
+    border: 0px ridge !important;
+
+    border-radius: 5px;
+
+    box-shadow:
+        inset 0 0 18px rgba(120, 120, 120, 0.12),
+        0 0 8px rgba(100, 100, 100, 0.15) !important;
+
+    font-family: 'Cinzel', serif;
+}
+
+.breadcrumb .active {
+    color: #ffffff;
+
+    font-size: 18px !important;
+
+    font-family: 'Cinzel', serif;
+}
+
+/* ============================= */
+/* ✨ BUTTONS */
+/* ============================= */
+
+input.floatright {
+	background: rgba(100, 100, 100, 0.18) !important;
+
+	border: 0px ridge;
+
+	border-radius: 10px !important;
+
+	color: #ffffff !important;
+
+	text-shadow: 0 0 4px rgba(150, 150, 150, 0.25) !important;
+
+	box-shadow:
+		inset 0 0 18px rgba(100, 100, 100, 0.22),
+	    0 0 6px rgba(150, 150, 150, 0.18) !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+input.floatright:hover {
+	background: rgba(120, 120, 120, 0.22) !important;
+
+	box-shadow:
+		inset 0 0 22px rgba(150, 150, 150, 0.22),
+	    0 0 10px rgba(100, 100, 100, 0.28) !important;
+
+	transition: .7s !important;
+}
+
+button.button {
+	background: #4a4a4a;
+
+	border: 0px ridge;
+
+	border-radius: 10px !important;
+
+	color: #ffffff;
+
+	font-size: 18px !important;
+
+	text-shadow: 0 0 4px rgba(150, 150, 150, 0.25);
+
+	box-shadow:
+		inset 0 0 18px rgba(100, 100, 100, 0.25),
+	    0 0 6px rgba(150, 150, 150, 0.18) !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+button.button:hover {
+	background: #616161;
+
+	color: #ffffff;
+
+	box-shadow:
+		inset 0 0 24px rgba(150, 150, 150, 0.28),
+	    0 0 12px rgba(100, 100, 100, 0.30) !important;
+
+	transition: .7s !important;
+}
+
+/* ============================= */
+/* 🌙 COMMENT BOX */
+/* ============================= */
+
+#commentBox {
+	background: rgba(58, 58, 58, 0.55) !important;
+
+	box-shadow:
+		inset 0 0 18px rgba(150, 150, 150, 0.15),
+	    0 0 6px rgba(100, 100, 100, 0.18) !important;
+
+	border: none !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+::placeholder {
+	color: #d6d6d6 !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+div.comment {
+	background: rgba(75, 75, 75, 0.55);
+
+	box-shadow:
+		inset 0 0 18px rgba(150, 150, 150, 0.18),
+	    0 0 6px rgba(100, 100, 100, 0.18) !important;
+
+	font-weight: bold;
+
+	color: #f5f5f5;
+
+	font-family: 'Cinzel', serif;
+}
+
+input#comment {
+	background: rgba(120, 120, 120, 0.18) !important;
+
+	color: #111111 !important;
+
+	border-radius: 10px !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+small.text-muted {
+	color: #d6d6d6;
+
+	font-family: 'Cinzel', serif;
+}
+
+small.text-muted a {
+	color: #b0b0b0;
+
+	font-family: 'Cinzel', serif;
+}
+
+input[type="button"].bad {
+	background: #6b6b6b !important;
+
+	border-radius: 10px !important;
+
+	color: #111111 !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌙 GENERAL ALERT */
+.alert {
+	background: #4a4a4a;
+
+	border: 0px ridge;
+
+	text-align: center;
+
+	text-shadow: 1px 1px 2px #000;
+
+	border-radius: 10px !important;
+
+	float: none;
+
+	color: #f5f5f5 !important;
+
+	box-shadow:
+		#9e9e9e33 0px -50px 36px -28px inset,
+		1px 1px 5px #000 !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* ⚠️ WARNING ALERT */
+.alert-warning{
+	background: #616161;
+
+	border: 0px ridge;
+
+	text-align: center;
+
+	text-shadow: 1px 1px 2px #000;
+
+	border-radius: 10px !important;
+
+	float: none;
+
+	color: #ffffff !important;
+
+	box-shadow:
+		#9e9e9e33 0px -50px 36px -28px inset,
+		1px 1px 5px #000 !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* ❗ DANGER ALERT */
+.alert-danger {
+	background: #383838 !important;
+
+	text-align: center;
+
+	border: 0px ridge;
+
+	text-shadow: 1px 1px 2px #000;
+
+	border-radius: 10px !important;
+
+	float: none;
+
+	color: #f5f5f5 !important;
+
+	box-shadow:
+		#9e9e9e33 0px -50px 36px -28px inset,
+		1px 1px 5px #000 !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌑 SIDE BOXES / FEATURE PANELS */
+.feature,
+div.left {
+	background: #444444 !important;
+
+	box-shadow:
+		#9e9e9e22 0px -80px 36px -28px inset,
+		1px 1px 5px #000 !important;
+
+	text-shadow: 1px 1px 2px #000;
+
+	border-radius: 10px !important;
+
+	border: none!important;
+
+	color: #f5f5f5 !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌙 MAIN PANELS */
+.panel {
+	background: #4a4a4a !important;
+
+	border: 0px ridge !important;
+
+	border-radius: 10px;
+
+	color:#f5f5f5 !important;
+
+	box-shadow:
+		#9e9e9e22 0px -50px 36px -28px inset,
+		1px 1px 5px #000 !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* ✨ TEXT INSIDE BARS */
+.progress div {
+	color: #ffffff !important;
+
+	font-size: 13px !important;
+
+	text-shadow: 1px 1px 1px #000 !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌑 BAR BACKGROUND */
+.progress {
+	background: linear-gradient(#383838, #4a4a4a);
+
+	box-shadow:1px 1px 5px #000 !important;
+
+	border-radius: 20px;
+}
+
+/* ❤️ ENERGY BAR */
+.progress-bar-warning {
+   background: linear-gradient(#9e9e9e, #616161)!important;
+}
+
+/* 🩸 HUNGER BAR */
+.progress-bar-danger {
+    background: linear-gradient(#4a4a4a, #9e9e9e)!important;
+}
+
+/* ✨ XP BAR */
+.progress-bar-success {
+    background: linear-gradient(#b0b0b0, #4a4a4a)!important;
+}
+
+/* 📊 GENERAL BAR STYLE */
+.progress-bar {
+    background: linear-gradient(#9e9e9e, #6b6b6b);
+
+	border-radius: 20px;
+
+	box-shadow:1px 1px 5px #000 !important;
+}
+
+/* 🏆 ACHIEVEMENT BAR */
+div:nth-child(2)>div>div>div.progress-bar.progress-bar-success {
+	background: linear-gradient(#b0b0b0, #4a4a4a)!important;
+}
+
+/* 📈 ACCOUNT STANDING */
+th > div > div.progress-bar.progress-bar-success {
+    background: linear-gradient(#9e9e9e, #616161)!important;
+}
+  
+/* 🌲 MAIN HEADER */
+h1 {
+	color: #ffffff;
+
+	font-size: 72px;
+
+	font-family: 'Cinzel', serif;
+
+	text-align: center;
+
+	text-shadow: 0 0 12px rgba(150, 150, 150, 0.25);
+}
+
+/* 🍷 SUB HEADER */
+h2 {
+	color: #d6d6d6;
+
+	font-size: 56px;
+
+	text-align: center;
+
+	text-shadow: 0 0 10px rgba(120, 120, 120, 0.22);
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌹 SMALL HEADER */
+h3 {
+	color: #f5f5f5 !important;
+
+	font-size: 22px !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* ✨ HOVER EFFECT */
+h3:hover {
+	color: #b0b0b0 !important;
+
+	transition: .7s!important;
+}
+
+/* 🌑 MAIN LION INFO TABLE (container) */
+.table {
+	background: #1a1a1a; /* deep dark charcoal */
+
+	border: 0px ridge;
+
+	text-shadow: 1px 1px 1.5px #000;
+
+	border-radius: 10px !important;
+
+	border-collapse: separate;
+
+	box-shadow:
+		0 0 8px rgba(150, 150, 150, 0.12);
+
+	font-family: 'Cinzel', serif;
+}
+
+.table a:link,
+.table a:visited {
+	color: #b0b0b0 !important;
+
+	transition: 0.5s!important;
+
+	font-family: 'Cinzel', serif;
+}
+
+.table a:active {
+	color: #ffffff !important;
+
+	transition: 0.5s!important;
+
+	font-family: 'Cinzel', serif;
+}
+
+.table a:hover {
+	color: #ffffff !important;
+
+	transform: scale(1.05);
+
+	transition: 0.7s!important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌹 HEADER ROWS */
+.top,
+.bottom,
+th {
+	background: #4a4a4a !important;
+
+	box-shadow:
+		0 0 12px rgba(150, 150, 150, 0.12) inset,
+		1px 1px 5px #000 !important;
+
+	color: #ffffff !important;
+
+	font-size: 18px !important;
+
+	border-radius: 10px;
+
+	font-family: 'Cinzel', serif;
+}
+
+.table .left {
+	background: #262626 !important;
+
+	box-shadow:
+		0 0 10px rgba(150, 150, 150, 0.08) inset !important;
+
+	border-radius: 10px;
+}
+
+/* 🌑 INPUT FIELDS */
+input,
+select,
+textarea {
+	background: #262626 !important;
+
+	border: 0px ridge !important;
+
+	box-shadow:
+		0 0 10px rgba(150, 150, 150, 0.12) inset,
+		1px 1px 5px #000 !important;
+
+	border-radius: 10px;
+
+	color: #ffffff !important;
+
+	text-shadow: 1px 1px 2px #000 !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌹 INNER TABLE LEFT */
+.inner-table .left {
+	background: #303030 !important;
+
+	color: #ffffff !important;
+
+	box-shadow:
+		0 0 10px rgba(150, 150, 150, 0.10) inset,
+		1px 1px 5px #000 !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌑 INNER TABLE RIGHT */
+.inner-table .right {
+	background: #1a1a1a !important;
+
+	box-shadow:
+		0 0 12px rgba(150, 150, 150, 0.12) inset,
+		1px 1px 5px #000 !important;
+
+	color: #ffffff !important;
+
+	border-radius: 10px;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌹 RIGHT ODD */
+.right_odd {
+	background: #141414 !important;
+
+	box-shadow:
+		0 0 10px rgba(150, 150, 150, 0.10) inset !important;
+}
+
+/* 🌑 ITEM HEADER */
+.item-header {
+	background: #4a4a4a !important;
+
+	border-radius: 10px;
+
+	box-shadow:
+		0 0 10px rgba(150, 150, 150, 0.12) inset !important;
+
+	color: #ffffff !important;
+
+	font-size: 15px !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌹 ITEM */
+.item {
+	background: #262626 !important;
+
+	box-shadow:
+		0 0 12px rgba(150, 150, 150, 0.10) inset,
+		1px 1px 5px #000 !important;
+
+	border-radius: 10px;
+
+	border: 0px ridge !important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌿 ITEM FOOTER */
+.item-footer {
+	background: #1a1a1a;
+}
+
+/* 🍷 SLIDER */
+div.slider.round {
+	background: #616161 !important; /* dark ash glow */
+}
+
+div.slider.round::before {
+	background: #ffffff !important; /* pale silver light */
+}
+
+/* 🌹 CREDITS (DO NOT REMOVE) */ 
+.breadcrumb::after { 
+	content: "CSS by Sak#327675"; 
+	color: #b0b0b0; /* soft silver glow */
+	text-shadow: 1px 1px 1.5px #000; 
+	font-size: 12px !important; 
+	position: absolute; 
+	right: 20%; 
+	margin: 5px;
+	z-index: 100;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* 🌑 DYNASTY LIST — SILVER GLOW */
+.dynastylist .left {
+	position: relative;
+	overflow: hidden;
+	border-radius: 10px;
+	background-size: cover !important;
+	background-position: center !important;
+	background-repeat: no-repeat !important;
+	transition: 0.8s ease;
+	box-shadow: 1px 1px 5px #000;
+	width: 200px;
+	height: 200px;
+	display: block;
+}
+
+/* ensure anchor doesn't collapse layout */
+.dynastylist a {
+	display: block;
+}
+
+/* shared behavior fix */
+.dynastylist .left {
+	display: block;
+}
+
+/* change beetle book image by TawnyCollar#251887 */
+img[src$="den_ancestors.png"] {
+	background:none!important; 
+      content:url('https://i.ibb.co/HDjxjH87/Screenshot-2026-05-17-at-23-23-06.png')!important;
+}
+
+img[src$="den_ancestorsfem.png"] {
+	background:none!important; 
+	    content:url('https://i.ibb.co/8LpbNGKD/Screenshot-2026-05-17-at-23-23-57.png')!important;
+}
+
+img[src$="den_achievements.png"] {
+	background:none!important; 
+      content:url('https://i.ibb.co/JFGyVRQ8/Screenshot-2026-05-17-at-23-25-02.png')!important;
+}
+
+img[src$="den_showcase.png"] {
+	background:none!important; 
+       content:url('https://i.ibb.co/PpWRbLK/Screenshot-2026-05-17-at-23-26-06.png')!important;
+}
+
+img[src$="den_beetlebook.png"] {
+	background:none!important; 
+       content:url('https://i.ibb.co/4whLQr3V/Screenshot-2026-05-17-at-23-28-26.png');
+}
+
+/* 🍃 hover glow effect — dark grey shimmer */
+.row.dynastycollection .dynastylist .left:hover {
+	transform: scale(1.03);
+	box-shadow:
+		0 0 10px rgba(150, 150, 150, 0.25),
+		0 0 20px rgba(120, 120, 120, 0.18),
+		1px 1px 5px #000;
+	filter: brightness(1.08) saturate(1.1);
+}
+
+/* 🌑 BACKGROUND TABLE — VELVET DEPTH */
+.table {
+	background: #0b0b0b; /* deep obsidian-black base */
+	border: 0px ridge;
+	text-shadow: 1px 1px 1.5px #000;
+	border-radius: 10px !important;
+	border-collapse: separate;
+	box-shadow: 0 0 10px rgba(150, 150, 150, 0.15);
+
+	font-family: 'Cinzel', serif;
+}
+
+.table a:link {
+	color: #b0b0b0 !important; /* silver glow */
+	transition: 0.5s!important;
+
+	font-family: 'Cinzel', serif;
+}
+
+.table a:visited {
+	color: #b0b0b0 !important;
+	transition: 0.5s!important;
+
+	font-family: 'Cinzel', serif;
+}
+
+.table a:active {
+	color: #ffffff !important; /* pale flash */
+	transition: 0.5s!important;
+
+	font-family: 'Cinzel', serif;
+} 
+
+.table a:hover {
+	color: #ffffff !important;
+	-webkit-transform: scale(1.1);
+	transition: 0.7s!important;
+
+	font-family: 'Cinzel', serif;
+}
+
+/* ============================= */
+/* 🌑 CONTAINER */
+/* ============================= */
+
+.boxcontainer {
+    width: 100% !important;
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+
+    display: flex !important;
+    flex-wrap: nowrap !important;   /* 🚫 prevents second row */
+    justify-content: space-between;
+
+    gap: 15px;
+
+    clear: both !important;
+}
+
+/* ============================= */
+/* 🌹 BOX */
+/* ============================= */
+
+.box {
+    flex: 1 1 0; /* equal sizing */
+
+    min-width: 0; /* prevents overflow pushing wrap */
+    height: 240px;
+
+    background: linear-gradient(
+        180deg,
+        rgba(43, 43, 43, 0.95),
+        rgba(17, 17, 17, 0.95)
+    ) !important;
+
+    color: #ffffff;
+    padding: 12px;
+
+    border: 1px solid rgba(150, 150, 150, 0.30);
+    border-radius: 12px;
+
+    box-shadow:
+        0 0 18px rgba(0,0,0,0.65),
+        inset 0 0 25px rgba(150, 150, 150, 0.10);
+
+    box-sizing: border-box;
+
+    overflow: auto;
+}
+
+/* ============================= */
+/* ✨ HOVER */
+/* ============================= */
+
+.box:hover {
+    transform: translateY(-4px);
+}
+
+/* ============================= */
+/* 📱 MOBILE */
+/* ============================= */
+
+@media (max-width: 767px) {
+    .box {
+        width: 100% !important;
+        margin: 0 0 10px 0;
+    }
+}
