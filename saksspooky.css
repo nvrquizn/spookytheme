@@ -540,28 +540,6 @@ table#player img:hover {
     transition: .6s ease;
 }
 
-/* original code by hok-z #170947 */
-#lion_image:after {
-	content: "";
-
-	position: absolute;
-	left: 15px;
-	top: 28px;
-
-	width: 215px;
-	height: 215px;
-
-	background: url("https://i.ibb.co/2YkmPFLX/silverframe.gif") no-repeat center;
-	background-size: contain;
-
-	pointer-events: none;
-}
-
-table#player img {
-	border-radius: 5% !important;
-	overflow: hidden;
-}
-
 /* ============================= */
 /* 🌑 NAVBAR (DARK ASH GLOW) */
 /* ============================= */
